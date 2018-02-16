@@ -131,9 +131,8 @@ for(var i = 0; i < oopsArray.length; i++){
   if(i%2 === 1){
     oopsArray[i] = 'nope';
   }
+  console.log(oopsArray[i]);
 }
-
-console.log(oopsArray);
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
@@ -147,6 +146,9 @@ nope
 turn
 */
 
+for(var i = oopsArray.length - 1; i >= 0; i--){
+  console.log(oopsArray[i]);
+}
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
