@@ -187,7 +187,17 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyValuesArray = [];
 
+function copyArray(originArray, destinationArray){
+  for(var i = 0; i < originArray.length; i++){
+    destinationArray.splice(i, 0, originArray[i]);
+  }
+  console.log(destinationArray);
+}
+
+copyArray(valuesArray, copyValuesArray);
 
 /*Final Boss*/
 
@@ -196,7 +206,24 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote = "I've spent the first half of my life acquiring all this stuff and now I'll spend the second half getting rid of it!";
+var topQuoteArray = [];
+var word = 0;
+var arrIndex = 0;
 
+function longestWord(str, arr, len, indx){
+  var arr = str.split(" ");
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].length > len){
+      len = arr[i].length;
+      indx = i;
+    }
+  }
+  console.log(arr[indx]);
+}
+
+longestWord(topQuote, topQuoteArray, word, arrIndex);
+console.log(topQuote.length);
 
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
