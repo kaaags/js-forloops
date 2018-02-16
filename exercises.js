@@ -251,7 +251,7 @@ var myWayArray = [];
 var myWayDone = "";
 
 function allGrownUp(str, arr, res){
-  var arr = str.split(" ");
+  arr = str.split(" ");
   for(var i = 0; i < arr.length; i++){
     res += arr[i].toUpperCase().slice(0, 1) + arr[i].slice(1,arr[i].length) + " ";
   }
@@ -269,6 +269,15 @@ Note, please use two for loops to complete this problem
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
+function loop(pair){
+  for(i = 0; i < pair.length; i++){
+    for(k = 0; k < 2; k++){
+      console.log(pair[i][k]);
+    }
+  }
+}
+
+loop(guide);
 
 
 /* 15) Back to School
@@ -282,3 +291,53 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+function graduateAndSetNewClass(cohort){
+  for(i = 0; i < cohort.length; i++){
+    if(cohort[i].enrolled === true){
+      cohort[i].graduated = true;
+    }else{
+      cohort[i].enrolled = true;
+    }
+  }
+  console.log(cohort);
+}
+
+graduateAndSetNewClass(currentCohort);
