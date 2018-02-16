@@ -86,6 +86,16 @@ Write a for-loop that will push even numbers to the `evenNumArr` array. We want 
 Console.log your results.
 */
 
+var evenNumArr = [];
+
+for(var i = 0; i < 99; i += 2){
+  if(i%2 === 0){
+    evenNumArr.push(i);
+  }
+}
+
+console.log(evenNumArr);
+console.log("Array length:", evenNumArr.length);
 
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
